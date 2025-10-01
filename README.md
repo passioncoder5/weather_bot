@@ -5,7 +5,53 @@
 A Python GUI application to check the weather, with **animated background GIFs**, **voice input**, and **voice output** of weather details.
 
 ---
+### Find the docker image of this as global docker image name aravindaakumar/weather-bot:latest
+---
 
+# 🌦 Weather Bot (Dockerized)
+
+A **Python GUI Weather Application** with:
+
+* ✅ Animated background GIFs based on weather conditions
+* 🎙️ Voice input (ask the weather by speaking)
+* 🔊 Voice output (weather details spoken aloud)
+* 🖥️ Simple and responsive GUI
+
+---
+
+## 🚀 Run Anywhere with Docker
+
+### **1️⃣ Pull the Image**
+
+```bash
+docker pull aravindaakumar/weather-bot:latest
+```
+
+### **2️⃣ Run with GUI + Sound (Linux)**
+
+Allow Docker to access your X11 display and audio devices:
+
+```bash
+xhost +local:docker
+docker run -it --rm \
+    -e DISPLAY=$DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    --device /dev/snd \
+    aravindaakumar/weather-bot:latest
+```
+
+---
+
+## 🛠️ Features
+
+* 🌍 Check weather for **any city**
+* 🎞️ **Animated GIF backgrounds** (clouds, rain, snow, etc.)
+* 🎙️ **Voice input** for city names
+* 🔊 **Voice output** with `pyttsx3`
+* 🎨 Built with `Tkinter` + `ttkbootstrap`
+
+---
+## Build from source
 ## **Features**
 
 * Check the weather for any city
